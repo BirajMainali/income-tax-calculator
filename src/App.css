@@ -61,7 +61,48 @@ body {
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.15;
+}
+
+.app-header__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
   flex-shrink: 0;
+}
+
+.github-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  box-shadow: var(--shadow);
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.github-badge:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.github-badge__icon {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.github-badge__stars {
+  padding-left: 0.35rem;
+  border-left: 1px solid var(--border);
+  color: var(--text);
 }
 
 .app-header__disclaimer {
@@ -747,4 +788,26 @@ body {
     max-width: none;
     text-align: left;
   }
+}
+
+/* SEO footer — crawlable descriptive copy */
+.seo-footer {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  max-width: 52rem;
+}
+
+.seo-footer__title {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.seo-footer p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-light);
 }

@@ -11,6 +11,7 @@ import { TaxSaversCard } from './components/TaxSaversCard';
 import { TakeHomeCards } from './components/TakeHomeCards';
 import { AnnualBreakdownBar } from './components/AnnualBreakdownBar';
 import { TaxSlabTable } from './components/TaxSlabTable';
+import { SeoFooter } from './components/SeoFooter';
 import './App.css';
 
 const DEFAULT_GROSS = GOV_BASIC_SALARY_ANNUAL;
@@ -86,6 +87,8 @@ export default function App() {
           onBracketBaseChange={handleBracketBaseChange}
         />
       </main>
+
+      <SeoFooter />
     </div>
   );
 }

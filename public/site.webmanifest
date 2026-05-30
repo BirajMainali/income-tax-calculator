@@ -1,0 +1,10 @@
+{
+  "name": "Nepal Income Tax Calculator",
+  "short_name": "Tax Calc NP",
+  "description": "Free Nepal income tax and take-home salary calculator for FY 2082/83.",
+  "start_url": "/income-tax-calculator/",
+  "display": "standalone",
+  "background_color": "#f4f5f2",
+  "theme_color": "#2e7d32",
+  "lang": "en"
+}

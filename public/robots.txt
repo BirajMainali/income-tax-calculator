@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://birajmainali.github.io/income-tax-calculator/sitemap.xml
