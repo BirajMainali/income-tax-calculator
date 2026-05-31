@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { calculateTaxSummary } from './lib/calculateDetailedBrackets';
 import { getAllowableDeduction } from './lib/deductions';
 import { cloneDefaultSlabs, cloneSlabsForBase } from './lib/taxSlabs';
@@ -12,6 +12,8 @@ import { TakeHomeCards } from './components/TakeHomeCards';
 import { AnnualBreakdownBar } from './components/AnnualBreakdownBar';
 import { TaxSlabTable } from './components/TaxSlabTable';
 import { SeoFooter } from './components/SeoFooter';
+import { CopyContextButton } from './components/CopyContextButton';
+import { formatProjectionContext } from './lib/formatProjectionContext';
 import './App.css';
 
 const DEFAULT_GROSS = GOV_BASIC_SALARY_ANNUAL;
@@ -50,6 +52,26 @@ export default function App() {
     setRawSlabs(cloneSlabsForBase(base));
   };
 
+  const getProjectionContext = useCallback(
+    () =>
+      formatProjectionContext({
+        grossAnnual,
+        claimedContributions: annualContributions,
+        allowableDeduction,
+        bracketBase,
+        slabs,
+        summary,
+      }),
+    [
+      grossAnnual,
+      annualContributions,
+      allowableDeduction,
+      bracketBase,
+      slabs,
+      summary,
+    ],
+  );
+
   return (
     <div className="app">
       <AppHeader />
@@ -67,6 +89,7 @@ export default function App() {
         </div>
 
         <div className="app__results">
+          <CopyContextButton getText={getProjectionContext} />
           <TakeHomeCards monthly={summary.monthly} yearly={summary.yearly} />
           <AnnualBreakdownBar
             gross={grossAnnual}
