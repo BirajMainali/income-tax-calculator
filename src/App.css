@@ -868,7 +868,7 @@ body {
   }
 }
 
-/* SEO footer — crawlable descriptive copy */
+/* SEO footer — one quiet line; detail in index.html meta/schema */
 .seo-footer {
   margin-top: 2rem;
   padding-top: 1.25rem;
@@ -876,16 +876,9 @@ body {
   max-width: 52rem;
 }
 
-.seo-footer__title {
-  margin: 0 0 0.5rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
 .seo-footer p {
   margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.55;
+  font-size: 0.75rem;
+  line-height: 1.5;
   color: var(--text-light);
 }

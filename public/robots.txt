@@ -1,3 +1,4 @@
+# All crawlers — full access, nothing blocked
 User-agent: *
 Allow: /
 
